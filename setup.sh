@@ -1,6 +1,8 @@
 #!/bin/sh
 
-apk add setup-xorg-base icewm alacritty
+setup-xorg-base
+
+apk add icewm alacritty
 
 echo "Welcome to Alabastos!"
 
