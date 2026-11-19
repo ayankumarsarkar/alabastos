@@ -2,7 +2,7 @@
 
 setup-xorg-base
 
-apk add --no-cache icewm alacritty
+apk add --no-cache icewm alacritty firefox
 
 mkdir -p $HOME/Downloads
 wget -P $HOME/Downloads https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/GoogleSansCode.zip
