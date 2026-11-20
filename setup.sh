@@ -2,7 +2,7 @@
 
 setup-xorg-base
 
-apk add --no-cache icewm picom alacritty firefox xfe xfe-xfi
+apk add --no-cache icewm picom alacritty firefox xfe xfe-xfa xfe-xfw xfe-xfi
 
 mkdir -p $HOME/Downloads
 #mkdir -p $HOME/Pictures
@@ -47,7 +47,7 @@ tar -xzf themes/cupertino-dark.tar.gz -C $THEMES
 
 touch $ICEWM/theme
 cat << EOF > "$ICEWM/theme"
-Theme="cupertino-dark/default.theme"
+Theme="Cupertino_Dark/default.theme"
 EOF
 unset THEMES
 
