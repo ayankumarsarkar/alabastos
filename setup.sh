@@ -60,6 +60,7 @@ cat << EOF > "$ICEWM/startup"
 picom -b --config $HOME/.config/picom/picom.conf &
 EOF
 chmod +x $ICEWM/startup
+unset PICOM
 
 unset ICEWM
 
