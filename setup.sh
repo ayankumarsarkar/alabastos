@@ -5,7 +5,7 @@ setup-xorg-base
 apk add --no-cache icewm alacritty firefox xfe xfe-xfi
 
 mkdir -p $HOME/Downloads
-mkdir -p $HOME/Pictures
+#mkdir -p $HOME/Pictures
 
 # A Mono Face Font
 wget -P $HOME/Downloads https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/GoogleSansCode.zip
@@ -22,24 +22,42 @@ unzip $HOME/Downloads/Gentium-7.000.zip -d $FONTS/Gentium
 fc-cache -fv
 unset FONTS
 
+ICEWM="$HOME/.icewm"
+mkdir -p $ICEWM
+
 WALLPAPERS=$HOME/.local/share/wallpapers
 mkdir -p $WALLPAPERS
 
-mkdir -p $HOME/.icewm
-
 cp alabastos.png $WALLPAPERS/alabastos.png
 
-touch $HOME/.icewm/prefoverride
-cat << EOF > "$HOME/.icewm/prefoverride"
-DesktopBackgroundImage="$WALLPAPERS/alabastos.png"
+touch $ICEWM/prefoverride
+cat << EOF > "$ICEWM/prefoverride"
+DesktopBackgroundImage="$HOME/.local/share/wallpapers/alabastos.png"
 DesktopBackgroundColor="rgb:00/00/00"
 DesktopBackgroundScaled=1
 DesktopBackgroundCenter=0
 EOF
+unset WALLPAPERS
 
-echo "Welcome to Alabastos!"
+THEMES=$ICEWM/themes
+mkdir -p $THEMES
+
+tar -xzf themes/cupertino.tar.gz -C $THEMES
+tar -xzf themes/cupertino-dark.tar.gz -C $THEMES
+
+touch $ICEWM/theme
+cat << EOF > "$ICEWM/theme"
+Theme="cupertino-dark/default.theme"
+EOF
+unset THEMES
+
+unset ICEWM
 
 touch $HOME/.xinitrc
-echo "exec icewm-session" >> $HOME/.xinitrc
+cat << EOF > "$HOME/.xinitrc"
+exec icewm-session
+EOF
+
+echo "Welcome to Alabastos!"
 
 startx
