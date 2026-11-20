@@ -17,7 +17,7 @@ FONTS="$HOME/.local/share/fonts"
 mkdir -p $FONTS
 
 unzip $HOME/Downloads/GoogleSansCode.zip -d $FONTS/GoogleSansCode
-unzip $HOME/Downloads/Gentium-7.000.zip -d $FONTS/Gentium
+unzip $HOME/Downloads/Gentium-7.000.zip -d $FONTS
 
 fc-cache -fv
 unset FONTS
