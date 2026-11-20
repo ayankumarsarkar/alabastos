@@ -57,6 +57,7 @@ cp /etc/xdg/picom.conf.example $PICOM/picom.conf
 
 touch $ICEWM/startup
 cat << EOF > "$ICEWM/startup"
+#!/bin/sh
 picom -b --config $HOME/.config/picom/picom.conf &
 EOF
 chmod +x $ICEWM/startup
