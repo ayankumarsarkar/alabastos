@@ -18,7 +18,7 @@ The setup script installs and configures:
 - **Xfe** file manager and its utilities (Xfa, Xfw, Xfi)
 - **Flameshot** screenshot tool
 - **LocalSend** file-sharing application
-- Google Sans Code Nerd fonts and Gentium (so far...)
+- Andika (Sans-Serif), and Gentium (Serif), JetBrainsMono (Monospace Nerd Font)
 - The Cupertino light and dark IceWM themes (taken from [Cupertino | Ice-WM Themes](https://www.opendesktop.org/s/Window-Managers/p/2012987))
 - An Alabastos wallpaper (created using Canva) and default desktop configuration
 

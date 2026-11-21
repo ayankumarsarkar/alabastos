@@ -17,17 +17,21 @@ chmod +x $HOME/.local/bin/localsend
 cp -r $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/bin $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/lib $HOME/.local/
 # << This script is untested >>
 
-# A Mono Face Font
-wget -P $DOWNLOADS https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/GoogleSansCode.zip
+# Monospace Font
+wget -P $DOWNLOADS https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip
 
-# An Eurocentric Font
+# Serif Fonts (Eurocentric)
 wget -P $DOWNLOADS https://software.sil.org/downloads/r/gentium/Gentium-7.000.zip
+
+# Sans-Serif Font (Eurocentric)
+wget -p $DOWNLOADS https://software.sil.org/downloads/r/andika/Andika-7.000.zip
 
 FONTS="$HOME/.local/share/fonts"
 mkdir -p $FONTS
 
 unzip $DOWNLOADS/GoogleSansCode.zip -d $FONTS/GoogleSansCode
-unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/Gentium
+unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/
+unzip $DOWNLOADS/Andika-7.000.zip -d $FONTS/
 
 fc-cache -fv
 unset FONTS
