@@ -15,12 +15,12 @@ The setup script installs and configures:
 - **Picom** compositor
 - **Alacritty** terminal
 - **Firefox** web browser
-- **Xfe** file manager and its utilities
+- **Xfe** file manager and its utilities (Xfa, Xfw, Xfi)
 - **Flameshot** screenshot tool
 - **LocalSend** file-sharing application
-- Google Sans Code Nerd fonts and Gentium
-- The Cupertino light and dark IceWM themes
-- An Alabastos wallpaper and default desktop configuration
+- Google Sans Code Nerd fonts and Gentium (so far...)
+- The Cupertino light and dark IceWM themes (taken from [Cupertino | Ice-WM Themes](https://www.opendesktop.org/s/Window-Managers/p/2012987))
+- An Alabastos wallpaper (created using Canva) and default desktop configuration
 
 LocalSend installation is currently marked as untested in `setup.sh`.
 
@@ -47,7 +47,7 @@ chmod +x setup.sh
 
 The script creates the necessary `~/.icewm`, `~/.config/picom`, font, and wallpaper directories, then starts the X session with `startx`.
 
-> **Warning:** `setup.sh` replaces the existing `~/.icewm/theme`, `~/.icewm/prefoverride`, `~/.icewm/startup`, and `~/.xinitrc` files. Back up any existing desktop configuration before running it. It is highly recomended to run the script on a live environment.
+> **Warning:** `setup.sh` replaces the existing `~/.icewm/theme`, `~/.icewm/prefoverride`, `~/.icewm/startup`, and `~/.xinitrc` files. Back up any existing desktop configuration before running it. It is highly recomended to run the script on an alpine live environment.
 
 ## Default configuration
 
