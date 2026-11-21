@@ -2,22 +2,32 @@
 
 setup-xorg-base
 
-apk add --no-cache icewm alacritty firefox xfe xfe-xfi
+apk add --no-cache icewm alacritty firefox xfe xfe-xfi flameshot
 
-mkdir -p $HOME/Downloads
+DOWNLOADS=$HOME/Downloads
+mkdir -p $DOWNLOADS
 #mkdir -p $HOME/Pictures
 
+# << This script is untested >>
+wget -P $DOWNLOADS https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-1.18.2-linux-x86-64.tar.gz
+tar -xzf $DOWNLOADS/LocalSend-1.18.2-linux-x86-64.tar.gz -C $DOWNLOADS
+mkdir -p $HOME/.local/bin
+install -m 0755 $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/localsend $HOME/.local/bin/localsend
+chmod +x $HOME/.local/bin/localsend
+cp -r $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/bin $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/lib $HOME/.local/
+# << This script is untested >>
+
 # A Mono Face Font
-wget -P $HOME/Downloads https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/GoogleSansCode.zip
+wget -P $DOWNLOADS https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/GoogleSansCode.zip
 
 # An Eurocentric Font
-wget -P $HOME/Downloads https://software.sil.org/downloads/r/gentium/Gentium-7.000.zip
+wget -P $DOWNLOADS https://software.sil.org/downloads/r/gentium/Gentium-7.000.zip
 
 FONTS="$HOME/.local/share/fonts"
 mkdir -p $FONTS
 
-unzip $HOME/Downloads/GoogleSansCode.zip -d $FONTS/GoogleSansCode
-unzip $HOME/Downloads/Gentium-7.000.zip -d $FONTS/Gentium
+unzip $DOWNLOADS/GoogleSansCode.zip -d $FONTS/GoogleSansCode
+unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/Gentium
 
 fc-cache -fv
 unset FONTS
@@ -58,6 +68,7 @@ cat << EOF > "$HOME/.xinitrc"
 exec icewm-session
 EOF
 
+cd $HOME
 echo "Welcome to Alabastos!"
 
 startx
