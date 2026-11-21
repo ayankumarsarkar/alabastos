@@ -2,7 +2,7 @@
 
 setup-xorg-base
 
-apk add --no-cache icewm alacritty firefox xfe xfe-xfi flameshot
+apk add --no-cache icewm picom alacritty firefox xfe xfe-xfa xfe-xfw xfe-xfi flameshot
 
 DOWNLOADS=$HOME/Downloads
 mkdir -p $DOWNLOADS
@@ -57,9 +57,21 @@ tar -xzf themes/cupertino-dark.tar.gz -C $THEMES
 
 touch $ICEWM/theme
 cat << EOF > "$ICEWM/theme"
-Theme="cupertino-dark/default.theme"
+Theme="Cupertino_Dark/default.theme"
 EOF
 unset THEMES
+
+PICOM=$HOME/.config/picom
+mkdir -p $PICOM
+cp /etc/xdg/picom.conf.example $PICOM/picom.conf
+
+touch $ICEWM/startup
+cat << EOF > "$ICEWM/startup"
+#!/bin/sh
+picom -b --config $HOME/.config/picom/picom.conf &
+EOF
+chmod +x $ICEWM/startup
+unset PICOM
 
 unset ICEWM
 
