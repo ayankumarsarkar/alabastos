@@ -9,12 +9,12 @@ mkdir -p $DOWNLOADS
 #mkdir -p $HOME/Pictures
 
 # << This script is untested >>
-wget -P $DOWNLOADS https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-1.18.2-linux-x86-64.tar.gz
-tar -xzf $DOWNLOADS/LocalSend-1.18.2-linux-x86-64.tar.gz -C $DOWNLOADS
-mkdir -p $HOME/.local/bin
+#wget -P $DOWNLOADS https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-1.18.2-linux-x86-64.tar.gz
+#tar -xzf $DOWNLOADS/LocalSend-1.18.2-linux-x86-64.tar.gz -C $DOWNLOADS
+#mkdir -p $HOME/.local/bin
 install -m 0755 $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/localsend $HOME/.local/bin/localsend
-chmod +x $HOME/.local/bin/localsend
-cp -r $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/bin $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/lib $HOME/.local/
+#chmod +x $HOME/.local/bin/localsend
+#cp -r $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/bin $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/lib $HOME/.local/
 # << This script is untested >>
 
 # Monospace Font
