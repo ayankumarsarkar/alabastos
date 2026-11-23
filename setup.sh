@@ -50,6 +50,8 @@ DesktopBackgroundImage="$HOME/.local/share/wallpapers/alabastos.png"
 DesktopBackgroundColor="rgb:00/00/00"
 DesktopBackgroundScaled=1
 DesktopBackgroundCenter=0
+SmallIconSize=28
+MenuIconSize=28
 EOF
 unset WALLPAPERS
 
