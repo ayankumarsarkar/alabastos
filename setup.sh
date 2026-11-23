@@ -24,12 +24,12 @@ wget -P $DOWNLOADS https://github.com/ryanoasis/nerd-fonts/releases/download/v3.
 wget -P $DOWNLOADS https://software.sil.org/downloads/r/gentium/Gentium-7.000.zip
 
 # Sans-Serif Font (Eurocentric)
-wget -p $DOWNLOADS https://software.sil.org/downloads/r/andika/Andika-7.000.zip
+wget -P $DOWNLOADS https://software.sil.org/downloads/r/andika/Andika-7.000.zip
 
 FONTS="$HOME/.local/share/fonts"
 mkdir -p $FONTS
 
-unzip $DOWNLOADS/GoogleSansCode.zip -d $FONTS/GoogleSansCode
+unzip $DOWNLOADS/JetBrainsMono.zip -d $FONTS/JetBrainsMono
 unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/
 unzip $DOWNLOADS/Andika-7.000.zip -d $FONTS/
 
