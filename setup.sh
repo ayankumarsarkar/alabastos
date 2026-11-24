@@ -6,13 +6,13 @@ apk add --no-cache icewm picom alacritty firefox xfe xfe-xfa xfe-xfw xfe-xfi fla
 
 DOWNLOADS=$HOME/Downloads
 mkdir -p $DOWNLOADS
-#mkdir -p $HOME/Pictures
+mkdir -p $HOME/Pictures
 
 # << This script is untested >>
 #wget -P $DOWNLOADS https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-1.18.2-linux-x86-64.tar.gz
 #tar -xzf $DOWNLOADS/LocalSend-1.18.2-linux-x86-64.tar.gz -C $DOWNLOADS
 #mkdir -p $HOME/.local/bin
-install -m 0755 $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/localsend $HOME/.local/bin/localsend
+#install -m 0755 $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/localsend $HOME/.local/bin/localsend
 #chmod +x $HOME/.local/bin/localsend
 #cp -r $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/bin $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/lib $HOME/.local/
 # << This script is untested >>
@@ -32,6 +32,20 @@ mkdir -p $FONTS
 unzip $DOWNLOADS/JetBrainsMono.zip -d $FONTS/JetBrainsMono
 unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/
 unzip $DOWNLOADS/Andika-7.000.zip -d $FONTS/
+
+cat << EOF > "$HOME/.config/fontconfig/fonts.conf"
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+  <alias>
+    <family>monospace</family>
+    <prefer>
+      <family>JetBrains Mono</family>
+      <family>DejaVu Sans Mono</family>
+    </prefer>
+  </alias>
+</fontconfig>
+EOF
 
 fc-cache -fv
 unset FONTS
