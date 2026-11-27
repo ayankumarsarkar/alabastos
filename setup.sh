@@ -2,7 +2,7 @@
 
 setup-xorg-base
 
-apk add --no-cache icewm picom alacritty firefox xfe xfe-xfa xfe-xfw xfe-xfi flameshot
+apk add --no-cache icewm picom alacritty firefox xfe xfe-xfa xfe-xfw xfe-xfi flameshot gimp rclone
 
 DOWNLOADS=$HOME/Downloads
 mkdir -p $DOWNLOADS
