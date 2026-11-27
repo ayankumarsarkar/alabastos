@@ -66,6 +66,10 @@ DesktopBackgroundScaled=1
 DesktopBackgroundCenter=0
 SmallIconSize=28
 MenuIconSize=28
+
+TaskBarShowCPUStatus=1
+CPUStatusShowAcpiTemp=1
+CPUStatusShowAcpiTempInGraph=1
 EOF
 unset WALLPAPERS
 
