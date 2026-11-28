@@ -12,30 +12,22 @@ DOWNLOADS=$HOME/Downloads
 mkdir -p $DOWNLOADS
 mkdir -p $HOME/Pictures
 
-# << This script is untested >>
-#wget -P $DOWNLOADS https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-1.18.2-linux-x86-64.tar.gz
-#tar -xzf $DOWNLOADS/LocalSend-1.18.2-linux-x86-64.tar.gz -C $DOWNLOADS
-#mkdir -p $HOME/.local/bin
-#install -m 0755 $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/localsend $HOME/.local/bin/localsend
-#chmod +x $HOME/.local/bin/localsend
-#cp -r $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/bin $DOWNLOADS/LocalSend-1.18.2-linux-x86-64/lib $HOME/.local/
-# << This script is untested >>
-
 # Monospace Font
-wget -P $DOWNLOADS https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip
+#wget -P $DOWNLOADS https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip
 
 # Serif Fonts (Eurocentric)
-wget -P $DOWNLOADS https://software.sil.org/downloads/r/gentium/Gentium-7.000.zip
+#wget -P $DOWNLOADS https://software.sil.org/downloads/r/gentium/Gentium-7.000.zip
 
 # Sans-Serif Font (Eurocentric)
-wget -P $DOWNLOADS https://software.sil.org/downloads/r/andika/Andika-7.000.zip
+#wget -P $DOWNLOADS https://software.sil.org/downloads/r/andika/Andika-7.000.zip
 
 FONTS="$HOME/.local/share/fonts"
 mkdir -p $FONTS
 
-unzip $DOWNLOADS/JetBrainsMono.zip -d $FONTS/JetBrainsMono
-unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/
-unzip $DOWNLOADS/Andika-7.000.zip -d $FONTS/
+#unzip $DOWNLOADS/JetBrainsMono.zip -d $FONTS/JetBrainsMono
+#unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/
+#unzip $DOWNLOADS/Andika-7.000.zip -d $FONTS/
+tar -xzf graphoi.tar.gz -C $FONTS
 
 fc-cache -fv
 unset FONTS
