@@ -12,25 +12,31 @@ DOWNLOADS=$HOME/Downloads
 mkdir -p $DOWNLOADS
 mkdir -p $HOME/Pictures
 
-# Monospace Font
-#wget -P $DOWNLOADS https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip
-
-# Serif Fonts (Eurocentric)
-#wget -P $DOWNLOADS https://software.sil.org/downloads/r/gentium/Gentium-7.000.zip
-
-# Sans-Serif Font (Eurocentric)
-#wget -P $DOWNLOADS https://software.sil.org/downloads/r/andika/Andika-7.000.zip
 
 FONTS="$HOME/.local/share/fonts"
 mkdir -p $FONTS
 
-#unzip $DOWNLOADS/JetBrainsMono.zip -d $FONTS/JetBrainsMono
-#unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/
-#unzip $DOWNLOADS/Andika-7.000.zip -d $FONTS/
-tar -xzf archives/graphoi.tar.gz -C $FONTS
+# Monospace Font
+wget -P $DOWNLOADS https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/JetBrainsMono.zip
+unzip $DOWNLOADS/JetBrainsMono.zip -d $FONTS/JetBrainsMono
+
+# Serif Fonts (Eurocentric)
+wget -P $DOWNLOADS https://software.sil.org/downloads/r/gentium/Gentium-7.000.zip
+unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/
+
+# Sans-Serif Font (Eurocentric)
+wget -P $DOWNLOADS https://software.sil.org/downloads/r/andika/Andika-7.000.zip
+unzip $DOWNLOADS/Andika-7.000.zip -d $FONTS/
+
+# Sans and Serif fonts for the Bengali language
+unzip Noto_Sans_Bengali.zip -d $FONTS/
+unzip Noto_Serif_Bengali.zip -d $FONTS/
+
+#tar -xzf archives/graphoi.tar.gz -C $FONTS
 
 fc-cache -fv
 unset FONTS
+
 
 ICEWM="$HOME/.icewm"
 mkdir -p $ICEWM
