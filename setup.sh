@@ -64,8 +64,8 @@ unset WALLPAPERS
 THEMES=$ICEWM/themes
 mkdir -p $THEMES
 
-tar -xzf archives/cupertino.tar.gz -C $THEMES
-tar -xzf archives/cupertino-dark.tar.gz -C $THEMES
+tar -xzf themes/cupertino.tar.gz -C $THEMES
+tar -xzf themes/cupertino-dark.tar.gz -C $THEMES
 
 touch $ICEWM/theme
 cat << EOF > "$ICEWM/theme"
