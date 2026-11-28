@@ -2,7 +2,11 @@
 
 setup-xorg-base
 
-apk add --no-cache icewm picom alacritty firefox xfe xfe-xfa xfe-xfw xfe-xfi flameshot gimp rclone
+apk add --no-cache icewm picom alacritty firefox 
+
+apk add --no-cache xfe-xfi ristretto flameshot gimp
+
+apk add --no-cache xfe xfe-xfa xfe-xfw lite-xl  zathura zathura-pdf-poppler
 
 DOWNLOADS=$HOME/Downloads
 mkdir -p $DOWNLOADS
