@@ -29,8 +29,8 @@ wget -P $DOWNLOADS https://software.sil.org/downloads/r/andika/Andika-7.000.zip
 unzip $DOWNLOADS/Andika-7.000.zip -d $FONTS/
 
 # Sans and Serif fonts for the Bengali language
-unzip Noto_Sans_Bengali.zip -d $FONTS/
-unzip Noto_Serif_Bengali.zip -d $FONTS/
+unzip Noto_Sans_Bengali.zip -d $FONTS/Noto_Sans_Bengali
+unzip Noto_Serif_Bengali.zip -d $FONTS/Noto_Serif_Bengali
 
 #tar -xzf archives/graphoi.tar.gz -C $FONTS
 
