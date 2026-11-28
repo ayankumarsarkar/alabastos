@@ -33,20 +33,6 @@ unzip $DOWNLOADS/JetBrainsMono.zip -d $FONTS/JetBrainsMono
 unzip $DOWNLOADS/Gentium-7.000.zip -d $FONTS/
 unzip $DOWNLOADS/Andika-7.000.zip -d $FONTS/
 
-cat << EOF > "$HOME/.config/fontconfig/fonts.conf"
-<?xml version='1.0'?>
-<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
-<fontconfig>
-  <alias>
-    <family>monospace</family>
-    <prefer>
-      <family>JetBrains Mono</family>
-      <family>DejaVu Sans Mono</family>
-    </prefer>
-  </alias>
-</fontconfig>
-EOF
-
 fc-cache -fv
 unset FONTS
 
