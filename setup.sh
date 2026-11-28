@@ -37,6 +37,10 @@ unzip Noto_Serif_Bengali.zip -d $FONTS/Noto_Serif_Bengali
 fc-cache -fv
 unset FONTS
 
+CONFIG=$HOME/.config/Alacritty
+cp alacritty.toml $CONFIG/alacritty.toml
+
+unset CONFIG
 
 ICEWM="$HOME/.icewm"
 mkdir -p $ICEWM
